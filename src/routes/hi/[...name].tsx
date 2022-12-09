@@ -1,11 +1,19 @@
+import { A } from '@solidjs/router'
+import { For, Show } from 'solid-js'
 import { useNavigate, useParams } from 'solid-start'
 
 export default function () {
   const params = useParams()
   const navigate = useNavigate()
+  const [names, setNames] = createStore<string[]>([])
 
   const goBack = () => navigate(-1)
   const [t] = useI18n()
+
+  if (params.name && !names.includes(params.name)) {
+    setNames([...names, params.name])
+  }
+
   return (
     <div>
       <div text-4xl>
@@ -24,18 +32,20 @@ export default function () {
         </button>
       </div>
 
-      <div>
+      <Show when={names}>
         <p text-sm mt-4>
           <span opacity-75>{t('intro_aka')}:</span>
-          {/* <ul>
-          <li v-for="otherName in user.otherNames" :key="otherName">
-            // <RouterLink :to="`/hi/${otherName}`" replace>
-            //   {{ otherName }}
-            // </RouterLink>
-          </li>
-        </ul> */}
+          <ul>
+            <For each={names}>
+              {(item) => (
+                <li>
+                  <A href={`/hi/${item}`}>{item}</A>
+                </li>
+              )}
+            </For>
+          </ul>
         </p>
-      </div>
+      </Show>
     </div>
   )
 }
