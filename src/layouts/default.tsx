@@ -1,7 +1,7 @@
 import type { Component } from 'solid-js'
 import { Routes } from '@solidjs/router'
 import { FileRoutes } from 'solid-start'
-import Footer from '~/components/footer'
+import Footer from '~/components/Footer'
 
 const DefaultLayout: Component = () => {
   return (

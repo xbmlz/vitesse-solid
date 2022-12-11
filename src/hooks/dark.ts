@@ -1,9 +1,9 @@
 import { usePrefersDark } from '@solid-primitives/media'
 import { createStorageSignal } from '@solid-primitives/storage'
 
-// TODO: use createEffect to update html classList
+const prefersDark = usePrefersDark()
+
 const useDark = () => {
-  const prefersDark = usePrefersDark()
   const [dark, setDark] = createStorageSignal('color-scheme', 'auto')
   const toggleDark = () => {
     const html = window?.document.querySelector('html')
@@ -16,12 +16,13 @@ const useDark = () => {
       setDark('dark')
     }
   }
+  // TODO use createEffect to update html classList
   // createEffect(() => {
   //   console.log('prefersDark', prefersDark())
   //   if (dark() === 'auto') {
   //     toggleDark()
   //   }
-  // }, [prefersDark, dark])
+  // }, [prefersDark])
   return { dark, toggleDark }
 }
 

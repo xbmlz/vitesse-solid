@@ -1,11 +1,11 @@
 import { A } from '@solidjs/router'
 import { For, Show } from 'solid-js'
 import { useNavigate, useParams } from 'solid-start'
+import { names, setNames } from '~/store/user'
 
 export default function () {
   const params = useParams()
   const navigate = useNavigate()
-  const [names, setNames] = createStore<string[]>([])
 
   const goBack = () => navigate(-1)
   const [t] = useI18n()
@@ -32,18 +32,18 @@ export default function () {
         </button>
       </div>
 
-      <Show when={names}>
-        <p text-sm mt-4>
-          <span opacity-75>{t('intro_aka')}:</span>
-          <ul>
-            <For each={names}>
-              {(item) => (
-                <li>
-                  <A href={`/hi/${item}`}>{item}</A>
-                </li>
-              )}
-            </For>
-          </ul>
+      <Show when={names.length}>
+        <p class="text-sm mt-4">
+          <span class="opacity-75">{t('intro_aka')}:</span>
+          {/* <ul> */}
+          <For each={names}>
+            {(name) => (
+              <li>
+                <A href={`/hi/${name}`}>{name}</A>
+              </li>
+            )}
+          </For>
+          {/* </ul> */}
         </p>
       </Show>
     </div>

@@ -1,4 +1,4 @@
-import { Link } from '@solidjs/router'
+import { A } from '@solidjs/router'
 import type { Component } from 'solid-js'
 import { availableLocales } from '~/locales'
 import useDark from '~/hooks/dark'
@@ -13,9 +13,9 @@ const Footer: Component = () => {
   }
   return (
     <nav text-xl mt-6>
-      <Link href="/" class="icon-btn mx-2" title={t('btn_home')}>
+      <A href="/" class="icon-btn mx-2" title={t('btn_home')}>
         <div class="i-carbon-campsite" />
-      </Link>
+      </A>
 
       <button class="icon-btn mx-2 !outline-none" onClick={toggleDark}>
         <div class="i-carbon-sun dark:i-carbon-moon" />
@@ -25,9 +25,19 @@ const Footer: Component = () => {
         <div i-carbon-language />
       </a>
 
-      <Link class="icon-btn mx-2" href="/about">
+      <A class="icon-btn mx-2" href="/about">
         <div i-carbon-dicom-overlay />
-      </Link>
+      </A>
+
+      <A
+        class="icon-btn mx-2"
+        rel="noreferrer"
+        href="https://github.com/xbmlz/vitesse-solid"
+        target="_blank"
+        title="GitHub"
+      >
+        <div i-carbon-logo-github />
+      </A>
     </nav>
   )
 }

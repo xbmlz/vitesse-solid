@@ -1,5 +1,5 @@
 import { useNavigate } from 'solid-start'
-import Input from '~/components/input'
+import NameInput from '~/components/NameInput'
 
 export default function Home() {
   const [t] = useI18n()
@@ -27,10 +27,10 @@ export default function Home() {
 
       <div py-4 />
 
-      <Input ref={inputRef} />
+      <NameInput ref={inputRef} />
 
       <div>
-        <button class="btn" m-3 text-sm onClick={go}>
+        <button class="btn m-3 text-sm" onClick={go}>
           {t('btn_go')}
         </button>
       </div>
