@@ -1,7 +1,7 @@
 import type { Component } from 'solid-js'
 import { Routes } from '@solidjs/router'
 import { FileRoutes } from 'solid-start'
-// import Footer from '~/components/Footer'
+import Footer from '~/components/Footer'
 
 const DefaultLayout: Component = () => {
   return (
@@ -9,7 +9,7 @@ const DefaultLayout: Component = () => {
       <Routes>
         <FileRoutes />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
       <div class="mt-5 mx-auto text-center opacity-75 dark:opacity-50 text-sm">
         [Default Layout]
       </div>
