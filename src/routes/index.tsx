@@ -1,3 +1,4 @@
+import { Button, VStack } from '@hope-ui/core'
 import { useNavigate } from 'solid-start'
 import NameInput from '~/components/NameInput'
 
@@ -10,22 +11,14 @@ export default function Home() {
   }
 
   return (
-    <div>
-      <div text-4xl>
-        <div i-carbon-campsite inline-block />
-      </div>
-      <p>
-        <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
-          Vitesse for Solid
-        </a>
-      </p>
-      <p>
-        <em text-sm opacity-75>
-          {t('intro_desc')}
-        </em>
-      </p>
+    <VStack spacingY={5}>
+      <div class="text-4xl i-carbon-campsite inline-block" />
 
-      <div py-4 />
+      <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
+        Vitesse for Solid
+      </a>
+
+      <em text-sm>{t('intro_desc')}</em>
 
       <NameInput
         ref={inputRef}
@@ -34,11 +27,9 @@ export default function Home() {
         }}
       />
 
-      <div>
-        <button class="btn m-3 text-sm" onClick={go}>
-          {t('btn_go')}
-        </button>
-      </div>
-    </div>
+      <Button onClick={go} variant="solid" size="sm">
+        {t('btn_go')}
+      </Button>
+    </VStack>
   )
 }

@@ -2,13 +2,9 @@
   NODE_VERSION = "16"
 
 [build]
-  publish = "dist/public"
-  command = "pnpm run build"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  command = "pnpm run build:netlify"
+  publish = "netlify"
+  functions = "netlify/functions"
 
 [[headers]]
   for = "/manifest.webmanifest"

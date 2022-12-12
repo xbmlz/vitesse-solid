@@ -6,7 +6,23 @@ import { VitePWA } from 'vite-plugin-pwa'
 import mdx from '@mdx-js/rollup'
 import remarkGfm from 'remark-gfm'
 // @ts-expect-error - missing types
+import nodeAdapter from 'solid-start-node'
+// @ts-expect-error - missing types
 import staticAdapter from 'solid-start-static'
+// @ts-expect-error - missing types
+import netlifyAdapter from 'solid-start-netlify'
+// @ts-expect-error - missing types
+import vercelAdapter from 'solid-start-vercel'
+// @ts-expect-error - missing types
+import awsAdapter from 'solid-start-aws'
+
+const adapterMap = {
+  node: nodeAdapter(),
+  static: staticAdapter(),
+  netlify: netlifyAdapter(),
+  vercel: vercelAdapter(),
+  aws: awsAdapter(),
+}
 
 export default defineConfig({
   plugins: [
@@ -23,7 +39,8 @@ export default defineConfig({
     // https://github.com/solidjs/solid-start
     Solid({
       extensions: ['.mdx', '.md'],
-      adapter: staticAdapter(),
+      // @ts-expect-error - missing types
+      adapter: adapterMap[process.env.ADAPTER || 'node'],
     }),
 
     // https://github.com/antfu/unplugin-auto-import
@@ -69,6 +86,9 @@ export default defineConfig({
       },
     }),
   ],
+  ssr: {
+    noExternal: ['@hope-ui/core', '@hope-ui/styles'],
+  },
   build: {
     target: 'esnext',
   },
