@@ -12,6 +12,7 @@
     "start": "solid-start start",
     "test": "vitest run",
     "test:e2e": "cypress open",
+    "test:unit": "vitest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit"
