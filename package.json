@@ -43,6 +43,7 @@
     "solid-jsx": "^0.9.1",
     "solid-mdx": "^0.0.6",
     "solid-start-node": "^0.2.5",
+    "solid-start-static": "^0.2.7",
     "typescript": "^4.9.3",
     "undici": "^5.12.0",
     "unocss": "^0.47.5",

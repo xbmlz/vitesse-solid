@@ -5,6 +5,8 @@ import Unocss from 'unocss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import mdx from '@mdx-js/rollup'
 import remarkGfm from 'remark-gfm'
+// @ts-expect-error - missing types
+import staticAdapter from 'solid-start-static'
 
 export default defineConfig({
   plugins: [
@@ -21,6 +23,7 @@ export default defineConfig({
     // https://github.com/solidjs/solid-start
     Solid({
       extensions: ['.mdx', '.md'],
+      adapter: staticAdapter(),
     }),
 
     // https://github.com/antfu/unplugin-auto-import

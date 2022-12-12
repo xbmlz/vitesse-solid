@@ -4,6 +4,8 @@
     "esModuleInterop": true,
     "target": "ESNext",
     "module": "ESNext",
+    "noEmit": true,
+    "checkJs": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
     "jsxImportSource": "solid-js",
@@ -11,11 +13,13 @@
     "allowJs": true,
     "strict": true,
     "types": ["vite/client", "@testing-library/jest-dom"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "baseUrl": "./",
     "paths": {
       "~/*": ["./src/*"]
     }
   },
   "types": ["vitest"],
-  "exclude": ["node_modules", "add-ts-nocheck.cjs", "dist"]
+  "include": ["./**/*.ts", "./**/*.tsx", "./**/*.js", "./**/*.jsx"],
+  "exclude": ["node_modules", "**/node_modules/*", "add-ts-nocheck.cjs", "dist"]
 }
