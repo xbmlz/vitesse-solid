@@ -5,15 +5,7 @@
   publish = "dist"
   command = "pnpm run build"
 
-[functions]
-  directory = "dist/functions"
-
 [[redirects]]
   from = "/*"
   to = "/.netlify/functions/index"
   status = 200
-
-[[headers]]
-  for = "/manifest.webmanifest"
-  [headers.values]
-    Content-Type = "application/manifest+json"
