@@ -6,8 +6,10 @@
     "build": "solid-start build",
     "start": "solid-start start",
     "test": "vitest run",
+    "test:e2e": "cypress open",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@iconify-json/carbon": "^1.1.11",
@@ -19,6 +21,8 @@
     "@types/testing-library__jest-dom": "^5.14.5",
     "@xbmlz/eslint-config-prettier": "^0.1.16",
     "@xbmlz/eslint-config-solid": "^0.1.16",
+    "critters": "^0.0.16",
+    "cypress": "^12.0.2",
     "eslint": "^8.29.0",
     "jsdom": "^20.0.2",
     "remark-gfm": "^3.0.1",
@@ -40,5 +44,8 @@
     "@solid-primitives/media": "^2.0.4",
     "@solid-primitives/storage": "^1.3.3",
     "@unocss/reset": "^0.47.5"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }

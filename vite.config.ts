@@ -17,12 +17,6 @@ export default defineConfig({
       }),
       enforce: 'pre',
     },
-    // https://github.com/high1/solid-jsx
-    // mdx({
-    //   jsxImportSource: 'solid-js',
-    //   providerImportSource: 'solid-jsx',
-    //   remarkPlugins: [remarkGfm],
-    // }),
 
     // https://github.com/solidjs/solid-start
     Solid({

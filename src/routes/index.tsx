@@ -27,7 +27,12 @@ export default function Home() {
 
       <div py-4 />
 
-      <NameInput ref={inputRef} />
+      <NameInput
+        ref={inputRef}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') go()
+        }}
+      />
 
       <div>
         <button class="btn m-3 text-sm" onClick={go}>
