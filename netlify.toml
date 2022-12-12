@@ -2,7 +2,7 @@
   NODE_VERSION = "16"
 
 [build]
-  publish = "dist"
+  publish = "dist/public"
   command = "pnpm run build"
 
 [[redirects]]
