@@ -16,7 +16,7 @@ export default function Home() {
       </div>
       <p>
         <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
-          Vitesse
+          Vitesse for Solid
         </a>
       </p>
       <p>

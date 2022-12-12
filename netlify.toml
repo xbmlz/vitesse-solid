@@ -5,9 +5,12 @@
   publish = "dist"
   command = "pnpm run build"
 
+[functions]
+  directory = "dist/functions"
+
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/.netlify/functions/index"
   status = 200
 
 [[headers]]
