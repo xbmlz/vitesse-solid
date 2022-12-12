@@ -93,4 +93,4 @@ jobs:
         with:
           install-command: echo
           build: pnpm run build
-          start: npx vite --port 3000
+          start: npx vite --host --port 3333

@@ -4,9 +4,9 @@ context('Basic', () => {
   })
 
   it('basic nav', () => {
-    cy.url().should('eq', 'http://localhost:3000/')
+    cy.url().should('eq', 'http://localhost:3333/')
 
-    cy.get('#input').type('Vitesse{Enter}').url().should('eq', 'http://localhost:3000/hi/Vitesse')
+    cy.get('#input').type('Vitesse{Enter}').url().should('eq', 'http://localhost:3333/hi/Vitesse')
 
     cy.contains('[Default Layout]').should('exist')
   })
