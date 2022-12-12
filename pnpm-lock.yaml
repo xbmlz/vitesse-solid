@@ -18,6 +18,7 @@ specifiers:
   cypress: ^12.0.2
   eslint: ^8.29.0
   jsdom: ^20.0.2
+  pnpm: ^7.17.1
   remark-gfm: ^3.0.1
   solid-js: ^1.6.2
   solid-jsx: ^0.9.1
@@ -52,6 +53,7 @@ devDependencies:
   cypress: 12.0.2
   eslint: 8.29.0
   jsdom: 20.0.3
+  pnpm: 7.18.1
   remark-gfm: 3.0.1
   solid-js: 1.6.3
   solid-jsx: 0.9.1_solid-js@1.6.3
@@ -6729,6 +6731,12 @@ packages:
   /pluralize/8.0.0:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
+    dev: true
+
+  /pnpm/7.18.1:
+    resolution: {integrity: sha512-GulnWxFW1dej1sSiju1FlYtvWIYa35ZvbTk9F8jOo+1GgJEVdx1ObLaZCApd2I4IB+jozyNWzInEdV0hQgUq0Q==}
+    engines: {node: '>=14.6'}
+    hasBin: true
     dev: true
 
   /polka/1.0.0-next.22:
