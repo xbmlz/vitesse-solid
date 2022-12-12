@@ -4,6 +4,7 @@
     "esModuleInterop": true,
     "target": "ESNext",
     "module": "ESNext",
+    "skipLibCheck": true,
     "moduleResolution": "node",
     "jsxImportSource": "solid-js",
     "jsx": "preserve",
@@ -15,5 +16,6 @@
       "~/*": ["./src/*"]
     }
   },
-  "types": ["vitest"]
+  "types": ["vitest"],
+  "exclude": ["node_modules", "add-ts-nocheck.cjs", "dist"]
 }

@@ -6,6 +6,7 @@
     "node": ">=16"
   },
   "scripts": {
+    "postinstall": "node add-ts-nocheck.cjs",
     "dev": "solid-start dev",
     "build": "solid-start build",
     "start": "solid-start start",
@@ -19,7 +20,9 @@
     "@solid-primitives/i18n": "^1.1.2",
     "@solid-primitives/media": "^2.0.4",
     "@solid-primitives/storage": "^1.3.3",
-    "@unocss/reset": "^0.47.5"
+    "@unocss/reset": "^0.47.5",
+    "solid-js": "^1.6.2",
+    "solid-start": "^0.2.5"
   },
   "devDependencies": {
     "@iconify-json/carbon": "^1.1.11",
@@ -37,10 +40,8 @@
     "jsdom": "^20.0.2",
     "pnpm": "^7.17.1",
     "remark-gfm": "^3.0.1",
-    "solid-js": "^1.6.2",
     "solid-jsx": "^0.9.1",
     "solid-mdx": "^0.0.6",
-    "solid-start": "^0.2.5",
     "solid-start-node": "^0.2.5",
     "typescript": "^4.9.3",
     "undici": "^5.12.0",
