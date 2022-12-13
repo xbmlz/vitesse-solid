@@ -1,6 +1,5 @@
-import { A } from '@solidjs/router'
 import type { Component } from 'solid-js'
-import { HStack, useColorMode } from '@hope-ui/core'
+import { Anchor, HStack, useColorMode } from '@hope-ui/core'
 import { availableLocales } from '~/locales'
 
 const Footer: Component = () => {
@@ -14,30 +13,30 @@ const Footer: Component = () => {
 
   return (
     <HStack justify="center" spacingX={4} class="mt-4 text-xl">
-      <A href="/" title={t('btn_home')}>
+      <Anchor href="/" title={t('btn_home')}>
         <div class="i-carbon-campsite" />
-      </A>
+      </Anchor>
 
-      <a onClick={toggleColorMode}>
+      <Anchor onClick={toggleColorMode}>
         <div class="i-carbon-sun dark:i-carbon-moon" />
-      </a>
+      </Anchor>
 
-      <a title={t('btn_toggle_langs')} onClick={toggleLocales}>
+      <Anchor title={t('btn_toggle_langs')} onClick={toggleLocales}>
         <div i-carbon-language />
-      </a>
+      </Anchor>
 
-      <A href="/about">
+      <Anchor href="/about">
         <div i-carbon-dicom-overlay />
-      </A>
+      </Anchor>
 
-      <A
+      <Anchor
         rel="noreferrer"
         href="https://github.com/xbmlz/vitesse-solid"
         target="_blank"
         title="GitHub"
       >
         <div i-carbon-logo-github />
-      </A>
+      </Anchor>
     </HStack>
   )
 }

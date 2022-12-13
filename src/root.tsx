@@ -11,8 +11,7 @@ import {
 import { isServer } from 'solid-js/web'
 import DefaultLayout from './layouts/default'
 import { I18nProvider } from './locales'
-import '@unocss/reset/tailwind.css'
-import './root.css'
+import './styles/root.css'
 import 'uno.css'
 
 export default function Root() {

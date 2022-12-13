@@ -10,5 +10,6 @@
   "files.associations": {
     "*.css": "postcss"
   },
-  "editor.formatOnSave": false
+  "editor.formatOnSave": false,
+  "unocss.root": "packages/client"
 }

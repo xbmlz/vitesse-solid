@@ -1,0 +1,17 @@
+@import './markdown.css';
+
+body {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 300px),
+    fixed 0 0 / 20px 20px radial-gradient(var(--hope-colors-neutral-200) 1px, transparent 0),
+    fixed 10px 10px / 20px 20px radial-gradient(var(--hope-colors-neutral-200) 1px, transparent 0);
+}
+
+body.hope-theme-dark {
+  background: linear-gradient(
+      to bottom,
+      rgba(21, 22, 25, 0) 0%,
+      var(--hope-colors-common-background) 300px
+    ),
+    fixed 0 0 / 20px 20px radial-gradient(var(--hope-colors-neutral-800) 1px, transparent 0),
+    fixed 10px 10px / 20px 20px radial-gradient(var(--hope-colors-neutral-800) 1px, transparent 0);
+}

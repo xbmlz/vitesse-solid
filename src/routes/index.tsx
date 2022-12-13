@@ -1,4 +1,4 @@
-import { Button, VStack } from '@hope-ui/core'
+import { Anchor, Button, VStack } from '@hope-ui/core'
 import { useNavigate } from 'solid-start'
 import NameInput from '~/components/NameInput'
 
@@ -14,11 +14,11 @@ export default function Home() {
     <VStack spacingY={5}>
       <div class="text-4xl i-carbon-campsite inline-block" />
 
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
+      <Anchor href="https://github.com/antfu/vitesse" isExternal>
         Vitesse for Solid
-      </a>
+      </Anchor>
 
-      <em text-sm>{t('intro_desc')}</em>
+      <em class="text-sm opacity-75">{t('intro_desc')}</em>
 
       <NameInput
         ref={inputRef}

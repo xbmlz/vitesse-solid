@@ -15,7 +15,7 @@ const DefaultLayout: Component = () => {
   }, [colorMode])
 
   return (
-    <Container isCentered={true} class="px-4 py-10 text-gray-700 dark:text-gray-200">
+    <Container isCentered={true} centerContent class="px-4 py-10 text-gray-700 dark:text-gray-200">
       <Routes>
         <FileRoutes />
       </Routes>
