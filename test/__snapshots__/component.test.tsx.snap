@@ -2,13 +2,24 @@
 
 exports[`<Counter /> > renders 1 1`] = `
 <div>
-  <button
-    class="btn m-3 text-sm"
+  <div
+    class="hope-c-PJLV hope-c-PJLV-icLarnM-css hope-Stack-root"
   >
-    Clicks: 
-    <!--#-->
-    0
-    <!--/-->
-  </button>
+    <div
+      class="i-carbon-dicom-overlay text-4xl"
+    />
+    <div
+      class="text-2xl"
+    >
+      About
+    </div>
+    <button
+      class="hope-Button-root hope-c-gcZMyU hope-c-ezsQXO hope-c-hVhtWI my-4"
+      type="button"
+    >
+      Clicks: 
+      0
+    </button>
+  </div>
 </div>
 `;
