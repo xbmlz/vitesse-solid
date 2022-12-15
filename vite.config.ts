@@ -1,10 +1,11 @@
 import Solid from 'solid-start/vite'
+import Markdown from 'vite-plugin-solid-markdown'
+import remarkGfm from 'remark-gfm'
+import rehypePrettyCode from 'rehype-pretty-code'
 import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vitest/config'
 import Unocss from 'unocss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
-import remarkGfm from 'remark-gfm'
-import rehypePrettyCode from 'rehype-pretty-code'
 // @ts-expect-error - missing types
 import nodeAdapter from 'solid-start-node'
 // @ts-expect-error - missing types
@@ -15,7 +16,6 @@ import netlifyAdapter from 'solid-start-netlify'
 import vercelAdapter from 'solid-start-vercel'
 // @ts-expect-error - missing types
 import awsAdapter from 'solid-start-aws'
-import mdx from './mdx'
 
 const adapterMap = {
   node: nodeAdapter(),
@@ -27,8 +27,17 @@ const adapterMap = {
 
 export default defineConfig({
   plugins: [
-    await mdx({
-      rehypePlugins: [rehypePrettyCode],
+    // https://github.com/xbmlzg/vite-plugin-solid-markdown
+    Markdown({
+      wrapperClasses: 'prose prose-sm m-auto text-left',
+      rehypePlugins: [
+        [
+          rehypePrettyCode,
+          {
+            theme: 'vitesse-dark',
+          },
+        ],
+      ],
       remarkPlugins: [remarkGfm],
     }),
     // https://github.com/solidjs/solid-start
