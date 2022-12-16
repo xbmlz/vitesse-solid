@@ -28,18 +28,18 @@ export default function () {
       </Button>
 
       <Show when={names.length}>
-        <p class="text-sm">
+        <div class="text-sm">
           <span class="opacity-75">{t('intro_aka')}:</span>
-          {/* <ul> */}
-          <For each={names}>
-            {(name) => (
-              <li>
-                <A href={`/hi/${name}`}>{name}</A>
-              </li>
-            )}
-          </For>
-          {/* </ul> */}
-        </p>
+          <ul>
+            <For each={names}>
+              {(name) => (
+                <li>
+                  <A href={`/hi/${name}`}>{name}</A>
+                </li>
+              )}
+            </For>
+          </ul>
+        </div>
       </Show>
     </VStack>
   )
