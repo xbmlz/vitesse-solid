@@ -29,7 +29,8 @@
     "@stitches/core": "^1.2.8",
     "clsx": "^1.2.1",
     "solid-js": "^1.6.2",
-    "solid-start": "^0.2.5"
+    "solid-start": "^0.2.5",
+    "solid-toast": "^0.4.0"
   },
   "devDependencies": {
     "@iconify-json/carbon": "^1.1.11",

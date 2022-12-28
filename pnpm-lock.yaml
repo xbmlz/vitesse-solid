@@ -31,6 +31,7 @@ specifiers:
   solid-start-node: ^0.2.7
   solid-start-static: ^0.2.7
   solid-start-vercel: ^0.2.7
+  solid-toast: ^0.4.0
   typescript: ^4.9.3
   undici: ^5.12.0
   unocss: ^0.47.5
@@ -49,6 +50,7 @@ dependencies:
   clsx: 1.2.1
   solid-js: 1.6.3
   solid-start: 0.2.7_5dbkyhvd6f6wkinxbouilzufue
+  solid-toast: 0.4.0_solid-js@1.6.3
 
 devDependencies:
   '@iconify-json/carbon': 1.1.11
@@ -7306,6 +7308,14 @@ packages:
       wait-on: 6.0.1_debug@4.3.4
     transitivePeerDependencies:
       - supports-color
+
+  /solid-toast/0.4.0_solid-js@1.6.3:
+    resolution: {integrity: sha512-ciJbj+n+7KbUN6wfwZsW7lqFESLoQ9sXMG4uJWuHrIw2f0GxX3/wLSKs0Q1YwdTZZRxyRJ1Nwc2eBVcJvs91+g==}
+    peerDependencies:
+      solid-js: ^1.5.4
+    dependencies:
+      solid-js: 1.6.3
+    dev: false
 
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}

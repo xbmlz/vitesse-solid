@@ -11,6 +11,7 @@ const zhCN = {
   intro_aka: '也叫',
   intro_whats_your_name: '输入你的名字',
   not_found: '未找到页面',
+  welcome: '欢迎使用 Vitesse-Solid',
 }
 
 export default zhCN

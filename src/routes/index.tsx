@@ -1,5 +1,6 @@
 import { Anchor, Button, VStack } from '@hope-ui/core'
 import { useNavigate } from 'solid-start'
+import toast, { Toaster } from 'solid-toast'
 import NameInput from '~/components/NameInput'
 
 export default function Home() {
@@ -10,8 +11,18 @@ export default function Home() {
     if (inputRef.value) navigate(`/hi/${encodeURIComponent(inputRef.value)}`)
   }
 
+  onMount(() => {
+    inputRef.focus()
+    toast.success(t('welcome'), {
+      duration: 5000,
+      position: 'bottom-center',
+    })
+  })
+
   return (
     <VStack spacingY={5}>
+      <Toaster gutter={8} />
+
       <div class="text-4xl i-carbon-campsite inline-block" />
 
       <Anchor href="https://github.com/antfu/vitesse" isExternal>

@@ -11,6 +11,7 @@ const en = {
   intro_aka: 'Also known as',
   intro_whats_your_name: "What's your name?",
   not_found: 'Not found',
+  welcome: 'Welcome to Vitesse-Solid',
 }
 
 export default en
