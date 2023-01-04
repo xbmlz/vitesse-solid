@@ -17,7 +17,7 @@ const Footer: Component = () => {
         <div class="i-carbon-campsite" />
       </Anchor>
 
-      <Anchor onClick={toggleColorMode}>
+      <Anchor title={t('btn_toggle_dark')} onClick={toggleColorMode}>
         <div class="i-carbon-sun dark:i-carbon-moon" />
       </Anchor>
 
@@ -25,8 +25,12 @@ const Footer: Component = () => {
         <div i-carbon-language />
       </Anchor>
 
-      <Anchor href="/about">
+      <Anchor title={t('btn_about')} href="/about">
         <div i-carbon-dicom-overlay />
+      </Anchor>
+
+      <Anchor title="Tauri App" href="/tauri">
+        <div i-carbon-application-web />
       </Anchor>
 
       <Anchor

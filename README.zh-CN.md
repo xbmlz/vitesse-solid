@@ -35,6 +35,10 @@
 
 - 🎨 [UnoCSS](https://github.com/unocss/unocss) - 高性能且极具灵活性的即时原子化 CSS 引擎
 
+- 🎨 [HopeUI](https://next--hope-ui.netlify.app/docs/introduction/getting-started) - 一个基于 SolidJS 的 UI 组件库
+
+- ⚒️ [Solid Primitives](https://github.com/solidjs-community/solid-primitives) - 扩展SolidJS反应性的高质量原语库.
+
 - 😃 [各种图标集为你所用](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
 
 - 🌍 [I18n 国际化开箱即用](./src/locales)
@@ -53,6 +57,8 @@
 
 - ☁️ 零配置部署 Netlify
 
+- ⚗️ [Tauri Desktop App](https://tauri.app/) - 用于创建跨平台桌面应用程序
+
 <br>
 
 ## 预配置
@@ -60,6 +66,7 @@
 ### UI 框架
 
 - [UnoCSS](https://github.com/antfu/unocss) - 高性能且极具灵活性的即时原子化 CSS 引擎
+- [HopeUI](https://next--hope-ui.netlify.app/docs/introduction/getting-started) - 一个基于 SolidJS 的 UI 组件库
 
 ### Icons
 
@@ -147,3 +154,23 @@ pnpm build
 ### 部署到 Netlify
 
 前往 [Netlify](https://app.netlify.com/start) 并选择你的仓库, 一路 `OK` 下去，稍等一下后，你的应用将被创建.
+
+### Tauri Desktop App
+
+开发 Tauri 桌面应用，运行
+
+```bash
+pnpm tauri:dev
+```
+
+
+打包 Tauri 桌面应用，运行
+
+> 你可以参考 [Tauri 文档](https://tauri.studio/en/docs/getting-started/intro) 来了解更多关于 Tauri 的信息
+
+```bash
+pnpm tauri:build
+```
+
+
+

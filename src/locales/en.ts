@@ -12,6 +12,8 @@ const en = {
   intro_whats_your_name: "What's your name?",
   not_found: 'Not found',
   welcome: 'Welcome to Vitesse-Solid',
+  not_in_tauri: 'This page is only available in Tauri',
+  call_rust_methods: 'Call Rust methods',
 }
 
 export default en

@@ -25,6 +25,8 @@ const adapterMap = {
   aws: awsAdapter(),
 }
 
+const isTauri = process.env.TAURI === 'true'
+
 export default defineConfig({
   plugins: [
     // https://github.com/xbmlzg/vite-plugin-solid-markdown
@@ -44,7 +46,8 @@ export default defineConfig({
     Solid({
       extensions: ['.mdx', '.md'],
       // @ts-expect-error - missing types
-      adapter: adapterMap[process.env.ADAPTER || 'node'],
+      adapter: adapterMap[process.env.ADAPTER || 'static'],
+      ssr: !isTauri,
     }),
 
     // https://github.com/antfu/unplugin-auto-import
@@ -62,39 +65,49 @@ export default defineConfig({
     Unocss(),
 
     // https://github.com/antfu/vite-plugin-pwa
-    VitePWA({
-      registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
-      manifest: {
-        name: 'Vitesse',
-        short_name: 'Vitesse',
-        theme_color: '#ffffff',
-        icons: [
-          {
-            src: '/pwa-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
+    isTauri
+      ? undefined
+      : VitePWA({
+          registerType: 'autoUpdate',
+          includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
+          manifest: {
+            name: 'Vitesse',
+            short_name: 'Vitesse',
+            theme_color: '#ffffff',
+            icons: [
+              {
+                src: '/pwa-192x192.png',
+                sizes: '192x192',
+                type: 'image/png',
+              },
+              {
+                src: '/pwa-512x512.png',
+                sizes: '512x512',
+                type: 'image/png',
+              },
+              {
+                src: '/pwa-512x512.png',
+                sizes: '512x512',
+                type: 'image/png',
+                purpose: 'any maskable',
+              },
+            ],
           },
-          {
-            src: '/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-          {
-            src: '/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any maskable',
-          },
-        ],
-      },
-    }),
+        }),
   ],
   ssr: {
     noExternal: ['@hope-ui/core', '@hope-ui/styles'],
   },
+  // to make use of `TAURI_DEBUG` and other env variables
+  // https://tauri.studio/v1/api/config#buildconfig.beforedevcommand
+  envPrefix: ['VITE_', 'TAURI_'],
   build: {
-    target: 'esnext',
+    // Tauri supports es2021
+    target: ['es2021', 'chrome100', 'safari13'],
+    // don't minify for debug builds
+    minify: !process.env.TAURI_DEBUG ? 'esbuild' : false,
+    // produce sourcemaps for debug builds
+    sourcemap: !!process.env.TAURI_DEBUG,
   },
   // https://github.com/vitest-dev/vitest
   test: {

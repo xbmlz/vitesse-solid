@@ -36,6 +36,10 @@ Mocking up web app with <b>Vitesse for SolidJS</b><sup><em>(speed)</em></sup><br
 
 - 🎨 [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine
 
+- 🎨 [HopeUI](https://next--hope-ui.netlify.app/docs/introduction/getting-started) - Hope UI is a composable and accessible component library that gives you the foundation to build your next SolidJS application.
+
+- ⚒️ [Solid Primitives](https://github.com/solidjs-community/solid-primitives) - A library of high-quality primitives that extend SolidJS reactivity.
+
 - 😃 [Use icons from any icon sets with classes](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
 
 - 🌍 [I18n ready](./src/locales)
@@ -52,6 +56,8 @@ Mocking up web app with <b>Vitesse for SolidJS</b><sup><em>(speed)</em></sup><br
 
 - ☁️ Deploy on Netlify, zero-config
 
+- ⚗️ [Tauri Desktop App](https://tauri.app/) - build desktop apps with SolidJS
+
 <br>
 
 
@@ -60,6 +66,7 @@ Mocking up web app with <b>Vitesse for SolidJS</b><sup><em>(speed)</em></sup><br
 ### UI Frameworks
 
 - [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand atomic CSS engine.
+- [HopeUI](https://next--hope-ui.netlify.app/docs/introduction/getting-started) - Hope UI is a composable and accessible component library that gives you the foundation to build your next SolidJS application.
 
 ### Icons
 
@@ -160,6 +167,22 @@ Run the image and specify port mapping with the `-p` flag.
 
 ```bash
 docker run --rm -it -p 8080:80 vitesse-solid:latest
+```
+
+### Tauri Desktop App
+
+To develop the Tauri Desktop App, run
+
+```bash
+pnpm tauri:dev
+```
+
+To build the Tauri Desktop App, run
+
+> You can refer to [Tauri's documentation](https://tauri.studio/en/docs/getting-started/intro) for more information.
+
+```bash
+pnpm tauri:build
 ```
 
 ## Why

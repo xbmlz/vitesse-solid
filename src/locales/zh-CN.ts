@@ -12,6 +12,8 @@ const zhCN = {
   intro_whats_your_name: '输入你的名字',
   not_found: '未找到页面',
   welcome: '欢迎使用 Vitesse-Solid',
+  not_in_tauri: '此页面仅在 Tauri 中可用',
+  call_rust_methods: '调用 Rust 方法',
 }
 
 export default zhCN
