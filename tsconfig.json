@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "target": "ESNext",
+      "module": "ESNext",
+      "noEmit": true,
+      "checkJs": true,
+      "skipLibCheck": true,
+      "moduleResolution": "node",
+      "jsxImportSource": "solid-js",
+      "jsx": "preserve",
+      "allowJs": true,
+      "strict": true,
+      "types": ["vite/client", "@testing-library/jest-dom"],
+      "lib": ["DOM", "DOM.Iterable", "ESNext"],
+      "baseUrl": "./",
+      "paths": {
+        "~/*": ["./src/*"]
+      }
+    },
+    "types": ["vitest"],
+    "include": ["./**/*.ts", "./**/*.tsx", "./**/*.js", "./**/*.jsx"],
+    "exclude": ["node_modules", "**/node_modules/*", "add-ts-nocheck.cjs", "mdx.js", "dist"]
+  }

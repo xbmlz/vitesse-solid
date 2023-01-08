@@ -19,7 +19,7 @@
     "test:unit": "vitest",
     "lint": "eslint . --ext .ts,.tsx,.md,.mdx",
     "lint:fix": "eslint . --fix --ext .ts,.tsx,.md,.mdx",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit --skipLibCheck",
     "tauri:dev": "tauri dev",
     "tauri:build": "tauri build"
   },
