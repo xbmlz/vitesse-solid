@@ -1,25 +1,29 @@
 @import './markdown.css';
 
-body {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 300px),
-    fixed 0 0 / 20px 20px radial-gradient(var(--hope-colors-neutral-200) 1px, transparent 0),
-    fixed 10px 10px / 20px 20px radial-gradient(var(--hope-colors-neutral-200) 1px, transparent 0);
-}
-
-body.hope-theme-dark {
-  background: linear-gradient(
-      to bottom,
-      rgba(21, 22, 25, 0) 0%,
-      var(--hope-colors-common-background) 300px
-    ),
-    fixed 0 0 / 20px 20px radial-gradient(var(--hope-colors-neutral-800) 1px, transparent 0),
-    fixed 10px 10px / 20px 20px radial-gradient(var(--hope-colors-neutral-800) 1px, transparent 0);
-}
-
 html,
-body {
+body,
+#app {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
+html.dark {
+  background: #121212;
+  color-scheme: dark;
+}
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: rgb(13, 148, 136);
+  opacity: 0.75;
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}

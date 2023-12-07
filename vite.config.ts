@@ -6,15 +6,10 @@ import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vitest/config'
 import Unocss from 'unocss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
-// @ts-expect-error - missing types
 import nodeAdapter from 'solid-start-node'
-// @ts-expect-error - missing types
 import staticAdapter from 'solid-start-static'
-// @ts-expect-error - missing types
 import netlifyAdapter from 'solid-start-netlify'
-// @ts-expect-error - missing types
 import vercelAdapter from 'solid-start-vercel'
-// @ts-expect-error - missing types
 import awsAdapter from 'solid-start-aws'
 
 const adapterMap = {
@@ -95,9 +90,7 @@ export default defineConfig({
           },
         }),
   ],
-  ssr: {
-    noExternal: ['@hope-ui/core', '@hope-ui/styles'],
-  },
+  ssr: {},
   // to make use of `TAURI_DEBUG` and other env variables
   // https://tauri.studio/v1/api/config#buildconfig.beforedevcommand
   envPrefix: ['VITE_', 'TAURI_'],
@@ -111,12 +104,8 @@ export default defineConfig({
   },
   // https://github.com/vitest-dev/vitest
   test: {
-    deps: {
-      registerNodeLoader: true,
-    },
     environment: 'jsdom',
     globals: true,
     setupFiles: ['node_modules/@testing-library/jest-dom/extend-expect'],
-    transformMode: { web: [/\.[jt]sx?$/] },
   },
 })

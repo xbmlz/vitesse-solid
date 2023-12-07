@@ -36,8 +36,6 @@ Mocking up web app with <b>Vitesse for SolidJS</b><sup><em>(speed)</em></sup><br
 
 - 🎨 [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine
 
-- 🎨 [HopeUI](https://next--hope-ui.netlify.app/docs/introduction/getting-started) - Hope UI is a composable and accessible component library that gives you the foundation to build your next SolidJS application.
-
 - ⚒️ [Solid Primitives](https://github.com/solidjs-community/solid-primitives) - A library of high-quality primitives that extend SolidJS reactivity.
 
 - 😃 [Use icons from any icon sets with classes](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
@@ -66,7 +64,6 @@ Mocking up web app with <b>Vitesse for SolidJS</b><sup><em>(speed)</em></sup><br
 ### UI Frameworks
 
 - [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand atomic CSS engine.
-- [HopeUI](https://next--hope-ui.netlify.app/docs/introduction/getting-started) - Hope UI is a composable and accessible component library that gives you the foundation to build your next SolidJS application.
 
 ### Icons
 

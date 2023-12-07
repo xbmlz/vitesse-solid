@@ -1,25 +1,14 @@
 // @refresh reload
 import { Suspense } from 'solid-js'
-import { Body, Head, Html, Link, Meta, Scripts, ServerContext, Title } from 'solid-start'
+import { Body, Head, Html, Link, Meta, Scripts, Title } from 'solid-start'
 import { ErrorBoundary } from 'solid-start/error-boundary'
-import {
-  ColorModeScript,
-  HopeProvider,
-  cookieStorageManagerSSR,
-  injectCriticalStyle,
-} from '@hope-ui/core'
-import { isServer } from 'solid-js/web'
 import DefaultLayout from './layouts/default'
 import { I18nProvider } from './locales'
 import './styles/root.css'
 import 'uno.css'
+import '@unocss/reset/tailwind.css'
 
 export default function Root() {
-  const event = useContext(ServerContext)
-  const storageManager = cookieStorageManagerSSR(
-    isServer ? event?.request.headers.get('cookie') ?? '' : document.cookie
-  )
-  injectCriticalStyle()
   return (
     <Html lang="en">
       <Head>
@@ -32,16 +21,13 @@ export default function Root() {
         <Meta name="description" content="Opinionated Vite Starter Template" />
       </Head>
       <Body class="font-sans">
-        <ColorModeScript storageType={storageManager.type} />
-        <HopeProvider storageManager={storageManager}>
-          <Suspense>
-            <ErrorBoundary>
-              <I18nProvider>
-                <DefaultLayout />
-              </I18nProvider>
-            </ErrorBoundary>
-          </Suspense>
-        </HopeProvider>
+        <Suspense>
+          <ErrorBoundary>
+            <I18nProvider>
+              <DefaultLayout />
+            </I18nProvider>
+          </ErrorBoundary>
+        </Suspense>
         <Scripts />
       </Body>
     </Html>

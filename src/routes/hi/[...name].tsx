@@ -1,4 +1,3 @@
-import { Button, VStack } from '@hope-ui/core'
 import { A } from '@solidjs/router'
 import { For, Show } from 'solid-js'
 import { useNavigate, useParams } from 'solid-start'
@@ -16,19 +15,19 @@ export default function () {
   }
 
   return (
-    <VStack spacingY={2}>
+    <div>
       <div class="text-4xl i-carbon-pedestrian inline-block" />
 
       <p>{t('intro_hi', { name: params.name })}</p>
 
-      <em class="text-sm opacity-75">{t('intro_dynamic_route')}</em>
+      <p class="text-sm opacity-75">
+        <em>{t('intro_dynamic_route')}</em>
+      </p>
 
-      <Button onClick={goBack} variant="solid" size="sm">
-        {t('btn_back')}
-      </Button>
+      <button onClick={goBack}>{t('btn_back')}</button>
 
       <Show when={names.length}>
-        <div class="text-sm">
+        <div class="mt-4 text-sm">
           <span class="opacity-75">{t('intro_aka')}:</span>
           <ul>
             <For each={names}>
@@ -41,6 +40,6 @@ export default function () {
           </ul>
         </div>
       </Show>
-    </VStack>
+    </div>
   )
 }
